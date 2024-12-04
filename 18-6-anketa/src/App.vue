@@ -43,15 +43,15 @@
       </div>
 
       <div class="form-checkbox">
-        <span class="label">Что знаеш о Vue?</span>
+        <span class="label"  >Что знаеш о Vue?</span>
         <div class="checkbox">
-          <label><input type="checkbox" />Vuex</label>
+          <label><input type="checkbox" v-model="skills" name="skills" value="Vuex" />Vuex</label>
         </div>
         <div class="checkbox">
-          <label><input type="checkbox" />Vue CLI</label>
+          <label><input type="checkbox" v-model="skills" name="skills" value="Vue CLI" />Vue CLI</label>
         </div>
         <div class="checkbox">
-          <label><input type="checkbox" />Vuex Router</label>
+          <label><input type="checkbox"  v-model="skills" name="skills" value="Vuex Router" />Vuex Router</label>
         </div>
       </div>
 
@@ -68,7 +68,7 @@ export default {
          age: 23,
          city: 'nsk',
          relocation: null,
-         vueKnowledge: []
+         skills: []
         }
     },
   methods: {
@@ -78,7 +78,7 @@ export default {
         console.log('Age:', this.age);
         console.log('City:', this.city);
         console.log('To Tokyo:', this.relocation);
-        console.log('Vue knowledge:', this.vueKnowledge);
+        console.log('skills:', this.skills);
         console.groupEnd();
       
 
