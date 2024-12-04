@@ -4,7 +4,12 @@
       <h1>Анкета на VUE разработчика!</h1>
       <div class="form-control">
         <label for="name">Как тебя зовот</label>
-        <input type="text" id="name" placeholder="Введите имя" />
+        <input 
+        type="text"
+         id="name" 
+         placeholder="Введите имя"
+         v-model.trim="name" 
+         />
       </div>
 
       <div class="form-control">
@@ -52,8 +57,14 @@
 
 <script>
 export default {
+    data() {
+        return {
+         name: '',  
+        }
+    },
   methods: {
     submitHandler() {},
+    
   },
 };
 </script>
