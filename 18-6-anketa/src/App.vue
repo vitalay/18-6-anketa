@@ -35,10 +35,10 @@
       <div class="form-checkbox">
         <span>Готовы к переезду в Токио?</span>
         <div class="checkbox">
-          <label><input type="radio" name="trip" />Да</label>
+          <label><input type="radio" v-model="relocation" name="trip" value="yes"/>Да</label>
         </div>
         <div class="checkbox">
-          <label><input type="radio" name="trip" />Нет</label>
+          <label><input type="radio"  v-model="relocation" name="trip" value="no" />Нет</label>
         </div>
       </div>
 
@@ -67,7 +67,7 @@ export default {
          name: '',
          age: 23,
          city: 'nsk',
-         trip: '',
+         relocation: null,
          vueKnowledge: []
         }
     },
@@ -77,7 +77,7 @@ export default {
         console.log('Name:', this.name);
         console.log('Age:', this.age);
         console.log('City:', this.city);
-        console.log('Trip:', this.trip);
+        console.log('To Tokyo:', this.relocation);
         console.log('Vue knowledge:', this.vueKnowledge);
         console.groupEnd();
       
