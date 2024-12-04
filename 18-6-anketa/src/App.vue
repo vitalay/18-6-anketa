@@ -24,11 +24,11 @@
 
       <div class="form-control">
         <label for="city">Твой город</label>
-        <select id="sity">
+        <select id="sity" v-model="city">
           <option value="spb">Санкт-Петербург</option>
           <option value="msk">Москва</option>
           <option value="kzn">Казань</option>
-          <option selected value="nsk">Новосибирск</option>
+          <option value="nsk">Новосибирск</option>
         </select>
       </div>
 
@@ -65,7 +65,10 @@ export default {
     data() {
         return {
          name: '',
-         age: 23
+         age: 23,
+         city: 'nsk',
+         trip: '',
+         vueKnowledge: []
         }
     },
   methods: {
