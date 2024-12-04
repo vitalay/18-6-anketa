@@ -4,7 +4,7 @@
         <h1>Анкета на VUE разработчика!</h1>
         
         <!-- Поле имени -->
-        <div class="form-control" :class="{ invalid: errors.name }">
+        <!-- <div class="form-control" :class="{ invalid: errors.name }">
           <label for="name">Как тебя зовут</label>
           <input
             type="text"
@@ -13,8 +13,15 @@
             v-model.trim="name"
           />
           <small v-if="errors.name">{{ errors.name }}</small>
-        </div>
-  
+        </div> -->
+  <app-input
+    
+    placeholder="Введите имя"
+    :error="errors.name"
+    label="Как тебя зовут?"
+    v-model.trim="name"
+    
+     ></app-input>
         <!-- Возраст -->
         <div class="form-control">
           <label for="age">Выбери возраст</label>
@@ -72,6 +79,9 @@
   </template>
   
   <script>
+
+  import AppInput from './AppInput.vue'
+
   export default {
     data() {
       return {
@@ -87,6 +97,9 @@
           skills: null,
         },
       };
+    },
+    components: {
+      AppInput
     },
     methods: {
       formIsValid() {
