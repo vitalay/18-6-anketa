@@ -14,7 +14,12 @@
 
       <div class="form-control">
         <label for="age">Выбери возраст</label>
-        <input type="number" id="age" value="20" />
+        <input
+         type="number"
+         id="age" 
+         max="70"
+         v-model.number="age"
+          />
       </div>
 
       <div class="form-control">
@@ -59,11 +64,22 @@
 export default {
     data() {
         return {
-         name: '',  
+         name: '',
+         age: 23
         }
     },
   methods: {
-    submitHandler() {},
+    submitHandler() {
+        console.group('Form data');
+        console.log('Name:', this.name);
+        console.log('Age:', this.age);
+        console.log('City:', this.city);
+        console.log('Trip:', this.trip);
+        console.log('Vue knowledge:', this.vueKnowledge);
+        console.groupEnd();
+      
+
+    }
     
   },
 };
